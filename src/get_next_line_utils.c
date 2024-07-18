@@ -6,11 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 10:40:52 by tibarbos          #+#    #+#             */
-/*   Updated: 2024/07/18 15:27:12 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/18 17:10:09 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 int	f_strlen(char *str)
 {
