@@ -9,9 +9,9 @@ Like every single other 42 project, it had several goals in mind:
 - use of tools like GDB and Valgrind to debug, avoid memory leaks and errors;
 - incomplete instructions to promote self learning and error solving;
 - familiarity with Makefile and compilers;
-- introduction and use of static variables;
-- introduction and use of file descriptors;
-- introduction and use of input/output functions;
+- use of static variables;
+- use of file descriptors;
+- use of input/output functions;
 - etc;
 
 This project was made while studying in 42 Porto as part of the Computer Science
