@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 10:40:52 by tibarbos          #+#    #+#             */
-/*   Updated: 2024/07/18 17:10:09 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/23 00:51:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,11 @@ char	*f_substr(char *s, unsigned int start, size_t len)
 		len--;
 	}
 	substr[i] = '\0';
+	if (substr[0] == '\0')
+	{
+		free(substr);
+		substr = NULL;
+	}
 	return (substr);
 }
 
