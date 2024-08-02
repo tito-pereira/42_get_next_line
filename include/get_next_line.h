@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 15:35:07 by tibarbos          #+#    #+#             */
-/*   Updated: 2024/07/18 17:14:02 by marvin           ###   ########.fr       */
+/*   Updated: 2024/08/02 14:33:40 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <fcntl.h>
-# include "../libft/src/libft.h"
+# include "./libft/include/libft.h"
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42

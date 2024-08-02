@@ -6,11 +6,11 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 13:15:23 by tibarbos          #+#    #+#             */
-/*   Updated: 2024/07/18 17:10:03 by marvin           ###   ########.fr       */
+/*   Updated: 2024/08/02 12:31:02 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../include/get_next_line.h"
 
 char	*ft_safe(char *shovel, char *chest)
 {

@@ -18,10 +18,10 @@ RM = rm -rf
 SRC = ./src/get_next_line_utils.c \
       ./src/get_next_line.c
 
-OBJS = ${SRC:.c=.o}
+OBJS = $(SRC:%.c=%.o)
 
 $(NAME): $(OBJS)
-	cd ./libft && make
+	cd ./include/libft && make
 	$(AR) $(NAME) $(OBJS)
 
 all: $(NAME)
@@ -30,12 +30,12 @@ bonus: $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 clean:
-	cd ./libft && make clean
+	cd ./include/libft && make clean
 	$(RM) $(OBJS)
 
 fclean: clean
-	cd ./libft && make fclean
+	cd ./include/libft && make fclean
 	$(RM) $(NAME)
 
 re: fclean all
-	cd ./libft && make re
+	cd ./include/libft && make re
