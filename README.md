@@ -5,7 +5,7 @@ a library which included my previously made libft library and a new function cal
 line from a certain file descriptor passed as argument.
 Like every single other 42 project, it had several goals in mind:
 - continued practice of basic C syntax, logic, data types and structures;
-- dynamic data allocation managing;
+- dynamic memory allocation management;
 - use of tools like GDB and Valgrind to debug, avoid memory leaks and errors;
 - incomplete instructions to promote self learning and error solving;
 - familiarity with Makefile and compilers;
