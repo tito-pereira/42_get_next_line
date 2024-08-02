@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/29 16:50:54 by tibarbos          #+#    #+#              #
-#    Updated: 2024/08/02 13:19:43 by marvin           ###   ########.fr        #
+#    Updated: 2024/08/02 15:29:17 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,8 @@ BONUS_SRC = ./src/ft_lstnew.c \
 		  ./src/ft_lstiter.c \
 		  ./src/ft_lstmap.c
 BONUS_OBJ = $(BONUS_SRC:%.c=$(OBJDIR)/%.o)
+
+.PHONY: all bonus clean fclean re
 
 $(OBJDIR)/%.o: %.c
 	@mkdir -p $(dir $@)

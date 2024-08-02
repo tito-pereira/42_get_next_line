@@ -11,31 +11,51 @@
 # **************************************************************************** #
 
 NAME = libftgetnextline.a
+
+# Compiler && Tools
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar -rcs
 RM = rm -rf
+
+# Output colors
+RED= \e[31m
+GREEN= \e[32m
+BLUE= \e[34m
+WHITE= \e[37m
+
+# Source && Object Files
 SRC = ./src/get_next_line_utils.c \
       ./src/get_next_line.c
+OBJDIR= ./obj
+OBJ = $(SRC:%.c=$(OBJDIR)/%.o)
 
-OBJS = $(SRC:%.c=%.o)
+.PHONY: all bonus clean fclean re
 
-$(NAME): $(OBJS)
-	cd ./include/libft && make
-	$(AR) $(NAME) $(OBJS)
+$(OBJDIR)/%.o: %.c
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJ)
+	@cd ./include/libft && make -s
+	@$(AR) $(NAME) $(OBJ)
+	@echo "$(BLUE)libftgetnextline: $(GREEN)library compiled$(WHITE)"
 
 all: $(NAME)
 
-bonus: $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+bonus: $(OBJ)
+	@$(AR) $(NAME) $(OBJ)
+	@echo "$(BLUE)libftgetnextline: $(GREEN)library bonus compiled$(WHITE)"
 
 clean:
-	cd ./include/libft && make clean
-	$(RM) $(OBJS)
+	@cd ./include/libft && make -s clean
+	@$(RM) $(OBJDIR)
+	@echo "$(BLUE)libftgetnextline: $(RED)object files removed$(WHITE)"
 
 fclean: clean
-	cd ./include/libft && make fclean
-	$(RM) $(NAME)
+	@cd ./include/libft && make -s fclean
+	@$(RM) $(NAME)
+	@echo "$(BLUE)libftgetnextline: $(RED)library and object files removed$(WHITE)"
 
 re: fclean all
-	cd ./include/libft && make re
+	@cd ./include/libft && make -s re
